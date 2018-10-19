@@ -3,7 +3,6 @@ const cardColors = ["red", "red", "green", "green", "blue", "blue", "brown", "br
 let cards = document.querySelectorAll("div");
 cards = [...cards];
 
-
 const startTime = new Date().getTime();
 
 let activeCard = "";
