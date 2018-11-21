@@ -19,13 +19,13 @@ const clickCard = function () {
     activeCard.classList.remove("hidden");
 
     if (activeCards.length === 0) {
-        console.log("1 element");
+        console.log("first element");
         activeCards[0] = activeCard;
         return;
 
     }
     else {
-        console.log("2 element");
+        console.log("second element");
 
         cards.forEach(card => card.removeEventListener("click", clickCard))
 
@@ -35,7 +35,7 @@ const clickCard = function () {
         setTimeout(function () {
 
             if (activeCards[0].className === activeCards[1].className) {
-                console.log("wygrane")
+                console.log("win")
                 activeCards.forEach(card => card.classList.add("off"))
                 gameResult++;
                 cards = cards.filter(card => !card.classList.contains("off"));
@@ -47,7 +47,7 @@ const clickCard = function () {
                 }
             }
             else {
-                console.log("przegrana")
+                console.log("lose")
                 activeCards.forEach(card => card.classList.add("hidden"))
             }
             activeCard = "";
